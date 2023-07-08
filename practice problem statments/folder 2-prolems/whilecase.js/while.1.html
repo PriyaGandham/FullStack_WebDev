@@ -1,0 +1,33 @@
+<!--display list of comments onuser interface (not console)-->
+
+<html>
+<head>
+
+</head>
+<body>
+    <ol id="commentslist">
+
+    </ol>
+    <script>
+        
+
+         var comments=["product is good", "very nice", "not good", "excellent", "good at this price"];
+
+         var index=0;
+
+         var listitems="";
+
+         while(index<comments.length){
+             comments[index];
+             listitems =listitems+ "<li>"+comments[index]+"</li>"
+             index++;
+         }
+        
+        var commentslist = document.getElementById("commentslist");
+
+        commentslist.innerHTML= listitems;
+
+        
+    </script>
+</body>
+</html>

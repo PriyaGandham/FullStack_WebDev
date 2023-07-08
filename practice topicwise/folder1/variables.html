@@ -1,0 +1,30 @@
+<!--login system with dummy name and password-->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input  id="username" type="text"  placeholder="username"> <br><br>
+        <input  id="password" type="password"  placeholder="password"> <br><br>
+        <button onclick="logincheck()">Login</button>
+        <script>
+            function logincheck()  {
+            
+        var username= document.getElementById("username").value;
+        var password= document.getElementById("password").value;
+
+        console.log("username");
+         console.log("password");
+
+         if(username=="priyapg"&&password=="1234")
+         {
+            alert("Login Success");
+         }
+         else{
+            alert("Login failure");
+         }
+            }
+        </script>
+    </body>
+</html>

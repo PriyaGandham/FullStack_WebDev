@@ -1,0 +1,72 @@
+<!--flipkart-phone model-ratings-reviews-ffers-price-->
+<!--<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var product={
+                name:"roboman" ,
+                rating:{
+                    rate:2.5,
+                    ratings:6080,
+                    reviews:45678,
+                },
+                delivery:{
+                    pincode:678900,
+                    deliveryBy:"3rd july,tuesday",
+                    ispaid:false,
+                    orderBefore:"10:25pm",
+
+                },
+                specifications:{
+                    general:{
+                        "in the box": "deihfdkk",
+                        "model number":4900,
+                        "model name":"frdf-987",
+                    },
+                "display features":{
+
+                        "dispaly size":"67.890",
+                        "resolution":"450*700",
+                    }
+                }
+            }
+                console.log(product.rating.reviews);
+                console.log(product.specifications.general["in the box"]);
+                console.log(product.specifications["display features"].resolution);
+                console.log(product.specifications["display features"]["dispaly size"]);
+
+                
+
+            
+        </script>
+    </body>
+</html>-->
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var product={
+                name:"roboman" ,
+                rating:{
+                    rate:2.5,
+                    ratings:6080,
+                    reviews:45678,
+                }
+            }
+            var keys =Object.keys(product.rating);
+                console.log(keys);
+
+                for(var i=0;i<keys.length;i++){
+                    //if (keys[i] == "ratings")
+                   // if (keys[i] != "ratings")
+                    console.log(keys[i]+""+product.rating[keys[i]]);
+                }
+</script>
+</body>
+</html>

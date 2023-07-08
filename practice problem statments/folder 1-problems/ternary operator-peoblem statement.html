@@ -1,0 +1,33 @@
+
+<!--loginpage-username-password-capture dat-compare it with dummy data and display console 1.by &&  2.by || -->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" placeholder="username" id="username"><br>
+
+        <input type="password" placeholder="password" id="password"><br>
+           <button onclick="login()">login</button>
+
+        <script>
+               function login(){
+               var uname="abcd";
+               var upass="12345";
+
+             var username  = document.getElementById("username").value;
+             var password  = document.getElementById("password").value;
+
+            //uname==username && upass==password?console.log("loginsuccess"):console.log("loginfailure");
+                
+            uname==username||upass==password?console.log("loginsuccess"):console.log("loginfailure");
+               }
+
+        </script>
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,87 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var array=[10,20,30,40,50,60,70,80,90];
+
+            function byforloop(callbackfn){
+                for( var i=0;i<array.length;i++){
+               
+                     callbackfn(array[i]);
+
+                }
+            }
+ 
+            byforloop(function(x){
+                console.log(x);
+            })        
+            </script>
+    </body>
+</html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var array=[10,20,30,40,50,60,70,80];
+            array.forEach(function(value){
+                console.log(value);
+            })
+        </script>
+    </body>
+</html>
+
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            function f1(a){
+                a();
+            }
+            function f2(b){
+                b();
+            }
+            function f3(c){
+                c();
+            }
+            f1(function(){
+                  console.log("hi hello");
+            })
+            f2(function(){
+                  console.log("hi");
+            })
+            f3(function(){
+                  console.log("hi");
+            })
+        </script>
+    </body>
+</html>
+
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            function f1(a){
+                a();
+            }
+            function f2(b){
+                b();
+            }
+            function f3(c){
+                c();
+            }
+         var callbackfn  = function(){
+                  console.log("hi hello priya");
+            };
+            f1(callbackfn);
+            f2(callbackfn);
+            f3(callbackfn);
+        </script>
+    </body>
+</html>

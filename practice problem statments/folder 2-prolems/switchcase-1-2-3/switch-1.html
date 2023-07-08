@@ -1,0 +1,52 @@
+<!--create a drop down list ,based on selected city,display test centers for driving license-->
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <select onchange="displayTestCenters()" id="city">
+
+
+            <option>Select your city</option>
+            <option value="hyd">Hyderabad</option>
+            <option value="raj">Rajamundry</option>
+            <option value="vij">Vijayawada</option>
+            <option value="viz">Vizag</option>
+        </select>
+
+        <div id="testCenters">
+
+        </div>
+
+        <script>
+
+             displayTestCenters();
+        function displayTestCenters() {
+                   
+                   var testCenters = document.getElementById("testCenters");
+
+                   var city = document.getElementById("city").value;
+                   
+                   switch (city) {
+
+                   case "hyd":testCenters.innerHTML="<h1>kondapur</h1><h1>Madhapur</h1>" 
+                   break;
+                   case "raj":testCenters.innerHTML="<h1>papermill</h1><h1>busstand</h1>" 
+                   break;
+                   case "vij":testCenters.innerHTML="<h1>benzcircle</h1><h1>p.junction</h1>" 
+                   break;
+                   case "viz":testCenters.innerHTML="<h1>apppur</h1><h1>sitapet</h1>" 
+                   break;
+                   default: testCenters.innerHTML = "<h1>please select a city</h1>";
+                   
+              }
+
+
+
+
+              }
+        </script>
+    </body>
+</html>

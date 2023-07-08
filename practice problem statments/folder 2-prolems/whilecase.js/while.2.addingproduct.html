@@ -1,0 +1,56 @@
+<!--implement a product management sysystem using whileloop 
+1.add product2. update pproduct 3. delete 4. list al the products-->
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" placeholder="enter product name"  id="name"> <br> <br>
+        <input type="number" placeholder="enter product price"  id="price"> <br> <br>
+        <input type="text" placeholder="enter product description"  id="desc"> <br><br>
+        <input type="text" placeholder="enter product url" id="url"> <br><br>
+        <button onclick="addProduct()"> Add product</button>
+
+        <ul id="prods">
+
+        </ul>
+        <script>
+             
+            var products=[];
+
+            function addProduct(){
+            
+            var name= document.getElementById("name").value;
+             var price= document.getElementById("price").value;
+             var desc = document.getElementById("desc").value;
+             var url = document.getElementById("url").value;
+
+             var product = {
+                name:name,
+                price:price,
+                desc:desc,
+                url:url,
+             }
+            products.push(product);
+            console.log(products);
+            displayproducts();
+            }
+
+            
+            function displayproducts(){
+            
+                var index=0;
+                var listitems = "";
+                while(index<products.length){
+                   //listitems=listitems+ "<li>"+products[index].name+"</li>"
+            listitems=listitems+ "<li>"+products[index].name+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" +products[index].price +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+products[index].desc+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+"<img width='60px' height='60px' src=" + products[index].url + "</li>"
+            index++;
+                }
+          var prods = document.getElementById("prods");
+          prods.innerHTML=listitems;
+            }
+        </script>
+    </body>
+</html>

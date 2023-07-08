@@ -1,0 +1,68 @@
+local:
+<!--
+    <html>
+    <head>
+    </head>
+    <body>
+<scrpit>
+    function f1() {
+        var a=10;   lc declaration
+        var b=20;
+        var c=30;
+    
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    
+     f1(); fun call
+    
+</scrpit>
+    </body>
+</html>-->
+
+global:
+<!--<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            var a =100; //Gv
+            var b=200;  //Gv
+            console.log(a); 
+            function f1() {
+                    console.log(a);
+                    a=80;
+
+            }
+            function f2(){
+                console.log(b);
+            }
+
+            f1();
+            f2();
+            console.log(a);
+        </script>
+    </body>
+</html>-->
+
+
+local and global:
+<!--<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var a=100;//gv
+            function f1() {
+                var a=0; //lv
+                console.log(a);
+                a=900;
+            }
+         f1();
+        console.log(a);
+        </script>
+    </body>
+</html>-->
+

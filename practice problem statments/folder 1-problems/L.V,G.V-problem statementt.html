@@ -1,0 +1,24 @@
+<!--implement a like feature eachtime we click like icon count increases
+
+step1:get like icon ,step2:make it clickable ,step3: eachtime clicked_ increment value of variable
+step4:display updated value on ui everytime user clickson it-->
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <i onclick="incrementValue()" class="fa fa-thumbs-up" style=font-size:150px></i>
+    <h1 id="inc" style="display: inline">0</h1>
+
+<script>
+    var likes= 0;
+    function incrementValue() {
+    
+            document.getElementById("inc").innerHTML =   likes;
+            likes++;
+    }
+</script>
+</body>
+</html>

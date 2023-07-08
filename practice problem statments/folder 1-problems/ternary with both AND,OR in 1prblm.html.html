@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" placeholder="email/phonenumber" id="username"><br>
+
+        <input type="password" placeholder="password" id="password"><br>
+
+        <button onclick="login()">login</button>
+
+        <script>
+            function login() {
+                
+                var email="priyahj89@gmail.com"
+               var phonenumber="56789";
+               var pword="12345";
+
+             var username  = document.getElementById("username").value;
+             var password  = document.getElementById("password").value;
+
+            
+            (email==username || phonenumber==username)&& pword==password?console.log("login success"):console.log("login failure");
+                
+            }
+        </script>
+    </body>
+</html>
