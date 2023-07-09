@@ -1,0 +1,271 @@
+<!-- stylelists css
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HIion15thJUne</title>
+        <link rel="icon" type="image/png" href="html practice\dasara.jpg">
+        <style>
+            
+            ul.p{
+                     list-style-type:circle;
+                     list-style-position:outside;
+            }
+            ul.q{
+                    list-style-type: square;
+                    list-style-position: inside;
+            }
+
+            ol{
+                background: rgb(33, 7, 179);
+                padding:20px;
+            }
+        
+            
+            ol.r li{
+                    list-style-type: lower-alpha;
+                    display:flexbox;
+                    color:#c2c241;
+            }
+            ol.s li{
+                   list-style-type: upper-roman;
+                   list-style-position: inside;
+                   background-color: black;
+                   color: brown;
+            }
+            ol.t li{
+                  background-color: aqua;
+                  color:blanchedalmond;
+                  padding:2px;
+                  margin: 5px;
+                }
+
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>example of unordered lists</h1>
+        <ul class="p">
+            <li>mummy</li>
+            <li>daddy</li>
+            <li>priya</li>
+        </ul>
+        <ul class="q">
+            <li>mummy</li>
+            <li>daddy</li>
+            <li>priya</li>
+        </ul>
+
+        <h1>example of ordered lists</h1>
+        <ol class="r">
+            <li>hyderabad</li>
+            <li>chennai</li>
+            <li>banglore</li>
+        </ol>
+        <ol class="s">
+            <li>hyderabad</li>
+            <li>chennai</li>
+            <li>banglore</li>
+        </ol>
+        <ol class="t">
+            <li>hyderabad</li>
+            <li>chennai</li>
+            <li>banglore</li>
+        </ol>
+
+    </body>
+</html> -->
+
+
+
+<!--tables css
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>hi tables</title>
+        <link rel="icon" type="image/png" href="">
+        <style>
+           #passenger {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    width:100%;
+                    height:20%;
+                    text-align:left;
+                    border-collapse: collapse;
+                    margin: 20px;
+                
+
+           }
+           #passenger td, #passenger th { 
+                         
+                     border-style:dashed;
+                     padding: 20px;
+                     
+           }
+           
+           #passenger tr:hover{
+                           background-color: rgb(127, 212, 88);
+                           
+           }
+           #passenger th{
+                      background-color: rgb(204, 123, 170);
+           }
+
+           #passenger tr:nth-child(odd){
+                     background-color: rgb(221, 169, 90);
+                     padding-left: 5px;
+           }
+          
+           
+        </style>
+    </head>
+    <body >
+        <div style="overflow: auto";>
+         <h1 style="text-align: center;">my table </h1>
+
+         <table id="passenger" >
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>place</th>
+                <th>country</th>
+            </tr>
+            <tr>
+                <td>priya</td>
+                <td>13</td>
+                <td>x</td>
+                <td>p</td>
+            </tr>
+            <tr>
+                <td>deepu</td>
+                <td>32</td>
+                <td>y</td>
+                <td>r</td>
+            </tr>
+            <tr>
+                <td>priyanka</td>
+                <td>23</td>
+                <td>z</td>
+                <td>s</td>
+            </tr>
+        </div>
+         </table>
+    </body>
+</html> -->
+
+<!--combinators
+problem statement:
+<html>
+    <head>
+  <style>
+       .one {
+            text-align:center
+            
+        }
+        .two{
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <h1 >This is a header 1</h1></div>
+    <h1 class="two">This header 2 </h1>
+    <h1 >This is header 3</h1>
+</body>
+</html> 
+
+Descendent combinator
+
+<html>
+    <head>
+  <style>
+       div {
+         
+        text-align: center;
+         
+       }
+    </style>
+</head>
+<body>
+
+   <div> 
+    <h1 >This is a header 1</h1> 
+    <h1 >This is a header 2 </h1>
+</div> 
+
+    <h1 >This is header 3</h1>
+</body>
+</html>
+  
+child combinator
+<html>
+    <head>
+  <style>
+       div >h1 {
+         
+        text-align: center;
+         background-color:rgb(201, 25, 25);
+       }
+    </style>
+</head>
+<body>
+
+   <div> 
+    <h1 >This is  header 1</h1> 
+<section><h1 >This is  header 2 </h1></section>
+    <h1 >This is header 3</h1>
+  </div> 
+    <h1 >This is header 4</h1>
+    <h1 >This is header 5</h1>
+</body>
+</html>
+
+adjacent sibiling selector
+
+<html>
+    <head>
+  <style>
+       div +h1 {
+         
+        text-align: center;
+         background-color:rgb(201, 25, 25);
+       }
+    </style>
+</head>
+<body>
+
+   <div> 
+    <h1 >This is  header 1</h1> 
+<section><h1 >This is  header 2 </h1></section>
+    <h1 >This is header 3</h1>
+  </div> 
+    <h1 >This is header 4</h1>
+    <h1 >This is header 5</h1>
+</body>
+</html> 
+
+general sibiling selector
+<html>
+    <head>
+  <style>
+       div ~h1 {
+         
+        text-align: center;
+         background-color:rgb(201, 25, 25);
+       }
+    </style>
+</head>
+<body>
+
+   <div> 
+    <h1 >This is  header 1</h1> 
+<section><h1 >This is  header 2 </h1></section>
+    <h1 >This is header 3</h1>
+    </div>
+    <h1 >This is header 4</h1>
+    <h1 >This is header 5</h1>
+    <p>hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
+</body>
+</html> -->
+ 
